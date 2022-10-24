@@ -1,7 +1,9 @@
 package io.datajek.spring.basics.movierecommendersystem.lesson1;
 
-public class RecommenderImplementation {
+import io.datajek.spring.basics.movierecommendersystem.lesson2.Filter;
 
+public class RecommenderImplementation {
+    private Filter filter;
     public String[] recommendMovies(String movies) {
         ContentBasedFilter filter = new ContentBasedFilter();
 
@@ -9,6 +11,12 @@ public class RecommenderImplementation {
 
         return results;
     }
+
+    public RecommenderImplementation(Filter filter) {
+        this.filter = filter;
+    }
+
+
 
 
 }
